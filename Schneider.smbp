@@ -14,93 +14,450 @@
           <RungEntity>
             <LadderElements>
               <LadderEntity>
-                <ElementType>Short</ElementType>
-                <Descriptor />
+                <ElementType>RtcFunctionBlock</ElementType>
+                <Descriptor>%RTC0</Descriptor>
+                <Comment />
+                <Symbol />
+                <Row>0</Row>
+                <Column>3</Column>
+                <ChosenConnection>Left</ChosenConnection>
+              </LadderEntity>
+              <LadderEntity>
+                <ElementType>Line</ElementType>
                 <Row>0</Row>
                 <Column>0</Column>
                 <ChosenConnection>Left, Right</ChosenConnection>
               </LadderEntity>
               <LadderEntity>
                 <ElementType>Line</ElementType>
-                <Descriptor />
                 <Row>0</Row>
                 <Column>1</Column>
                 <ChosenConnection>Left, Right</ChosenConnection>
               </LadderEntity>
               <LadderEntity>
                 <ElementType>Line</ElementType>
-                <Descriptor />
                 <Row>0</Row>
                 <Column>2</Column>
                 <ChosenConnection>Left, Right</ChosenConnection>
               </LadderEntity>
               <LadderEntity>
                 <ElementType>Line</ElementType>
-                <Descriptor />
-                <Row>0</Row>
-                <Column>3</Column>
+                <Row>2</Row>
+                <Column>1</Column>
                 <ChosenConnection>Left, Right</ChosenConnection>
               </LadderEntity>
               <LadderEntity>
                 <ElementType>Line</ElementType>
-                <Descriptor />
-                <Row>0</Row>
-                <Column>4</Column>
+                <Row>2</Row>
+                <Column>2</Column>
                 <ChosenConnection>Left, Right</ChosenConnection>
               </LadderEntity>
               <LadderEntity>
                 <ElementType>Line</ElementType>
-                <Descriptor />
+                <Row>1</Row>
+                <Column>1</Column>
+                <ChosenConnection>Left, Right</ChosenConnection>
+              </LadderEntity>
+              <LadderEntity>
+                <ElementType>Line</ElementType>
+                <Row>1</Row>
+                <Column>2</Column>
+                <ChosenConnection>Left, Right</ChosenConnection>
+              </LadderEntity>
+              <LadderEntity>
+                <ElementType>NormalContact</ElementType>
+                <Descriptor>%M500</Descriptor>
+                <Comment />
+                <Symbol>WRITE_BIT</Symbol>
+                <Row>1</Row>
+                <Column>0</Column>
+                <ChosenConnection>Left, Right</ChosenConnection>
+              </LadderEntity>
+              <LadderEntity>
+                <ElementType>NegatedContact</ElementType>
+                <Descriptor>%M500</Descriptor>
+                <Comment />
+                <Symbol>WRITE_BIT</Symbol>
+                <Row>2</Row>
+                <Column>0</Column>
+                <ChosenConnection>Left, Right</ChosenConnection>
+              </LadderEntity>
+            </LadderElements>
+            <InstructionLines>
+              <InstructionLineEntity>
+                <InstructionLine>BLK  %RTC0</InstructionLine>
+                <Comment />
+              </InstructionLineEntity>
+              <InstructionLineEntity>
+                <InstructionLine>LD  1</InstructionLine>
+                <Comment />
+              </InstructionLineEntity>
+              <InstructionLineEntity>
+                <InstructionLine>ENABLE</InstructionLine>
+                <Comment />
+              </InstructionLineEntity>
+              <InstructionLineEntity>
+                <InstructionLine>LD  %M500</InstructionLine>
+                <Comment />
+              </InstructionLineEntity>
+              <InstructionLineEntity>
+                <InstructionLine>WR</InstructionLine>
+                <Comment />
+              </InstructionLineEntity>
+              <InstructionLineEntity>
+                <InstructionLine>LDN  %M500</InstructionLine>
+                <Comment />
+              </InstructionLineEntity>
+              <InstructionLineEntity>
+                <InstructionLine>RD</InstructionLine>
+                <Comment />
+              </InstructionLineEntity>
+              <InstructionLineEntity>
+                <InstructionLine>END_BLK</InstructionLine>
+                <Comment />
+              </InstructionLineEntity>
+            </InstructionLines>
+            <Name>RTC</Name>
+            <MainComment />
+            <Label />
+            <IsLadderSelected>true</IsLadderSelected>
+          </RungEntity>
+          <RungEntity>
+            <LadderElements>
+              <LadderEntity>
+                <ElementType>Operation</ElementType>
+                <OperationExpression>%RTC0.DAY := %MW0</OperationExpression>
+                <Row>0</Row>
+                <Column>9</Column>
+                <ChosenConnection>Left</ChosenConnection>
+              </LadderEntity>
+              <LadderEntity>
+                <ElementType>Line</ElementType>
+                <Row>0</Row>
+                <Column>8</Column>
+                <ChosenConnection>Down, Left, Right</ChosenConnection>
+              </LadderEntity>
+              <LadderEntity>
+                <ElementType>Line</ElementType>
+                <Row>0</Row>
+                <Column>7</Column>
+                <ChosenConnection>Left, Right</ChosenConnection>
+              </LadderEntity>
+              <LadderEntity>
+                <ElementType>Line</ElementType>
+                <Row>0</Row>
+                <Column>6</Column>
+                <ChosenConnection>Left, Right</ChosenConnection>
+              </LadderEntity>
+              <LadderEntity>
+                <ElementType>Line</ElementType>
                 <Row>0</Row>
                 <Column>5</Column>
                 <ChosenConnection>Left, Right</ChosenConnection>
               </LadderEntity>
               <LadderEntity>
                 <ElementType>Line</ElementType>
-                <Descriptor />
                 <Row>0</Row>
-                <Column>6</Column>
+                <Column>4</Column>
+                <ChosenConnection>Left, Right</ChosenConnection>
+              </LadderEntity>
+              <LadderEntity>
+                <ElementType>Line</ElementType>
+                <Row>0</Row>
+                <Column>3</Column>
+                <ChosenConnection>Left, Right</ChosenConnection>
+              </LadderEntity>
+              <LadderEntity>
+                <ElementType>Line</ElementType>
+                <Row>0</Row>
+                <Column>2</Column>
                 <ChosenConnection>Left, Right</ChosenConnection>
               </LadderEntity>
               <LadderEntity>
                 <ElementType>Operation</ElementType>
-                <OperationExpression>%MW0 := 0</OperationExpression>
-                <Row>0</Row>
+                <OperationExpression>%RTC0.MONTH := %MW1</OperationExpression>
+                <Row>1</Row>
                 <Column>9</Column>
-                <ChosenConnection>Left, Right</ChosenConnection>
+                <ChosenConnection>Left</ChosenConnection>
               </LadderEntity>
               <LadderEntity>
-                <ElementType>Line</ElementType>
-                <Descriptor />
-                <Row>0</Row>
+                <ElementType>Operation</ElementType>
+                <OperationExpression>%RTC0.YEAR := %MW2</OperationExpression>
+                <Row>2</Row>
+                <Column>9</Column>
+                <ChosenConnection>Left</ChosenConnection>
+              </LadderEntity>
+              <LadderEntity>
+                <ElementType>Operation</ElementType>
+                <OperationExpression>%RTC0.HOURS := %MW3</OperationExpression>
+                <Row>3</Row>
+                <Column>9</Column>
+                <ChosenConnection>Left</ChosenConnection>
+              </LadderEntity>
+              <LadderEntity>
+                <ElementType>Operation</ElementType>
+                <OperationExpression>%RTC0.MINUTES := %MW4</OperationExpression>
+                <Row>4</Row>
+                <Column>9</Column>
+                <ChosenConnection>Left</ChosenConnection>
+              </LadderEntity>
+              <LadderEntity>
+                <ElementType>Operation</ElementType>
+                <OperationExpression>%RTC0.SECONDS := %MW5</OperationExpression>
+                <Row>5</Row>
+                <Column>9</Column>
+                <ChosenConnection>Left</ChosenConnection>
+              </LadderEntity>
+              <LadderEntity>
+                <ElementType>VerticalLine</ElementType>
+                <Row>1</Row>
                 <Column>8</Column>
-                <ChosenConnection>Left, Right</ChosenConnection>
+                <ChosenConnection>Up, Down, Right</ChosenConnection>
+              </LadderEntity>
+              <LadderEntity>
+                <ElementType>VerticalLine</ElementType>
+                <Row>2</Row>
+                <Column>8</Column>
+                <ChosenConnection>Up, Down, Right</ChosenConnection>
+              </LadderEntity>
+              <LadderEntity>
+                <ElementType>VerticalLine</ElementType>
+                <Row>3</Row>
+                <Column>8</Column>
+                <ChosenConnection>Up, Down, Right</ChosenConnection>
+              </LadderEntity>
+              <LadderEntity>
+                <ElementType>VerticalLine</ElementType>
+                <Row>4</Row>
+                <Column>8</Column>
+                <ChosenConnection>Up, Down, Right</ChosenConnection>
+              </LadderEntity>
+              <LadderEntity>
+                <ElementType>VerticalLine</ElementType>
+                <Row>5</Row>
+                <Column>8</Column>
+                <ChosenConnection>Up, Right</ChosenConnection>
               </LadderEntity>
               <LadderEntity>
                 <ElementType>Line</ElementType>
-                <Descriptor />
                 <Row>0</Row>
-                <Column>7</Column>
+                <Column>1</Column>
+                <ChosenConnection>Left, Right</ChosenConnection>
+              </LadderEntity>
+              <LadderEntity>
+                <ElementType>NormalContact</ElementType>
+                <Descriptor>%M501</Descriptor>
+                <Comment />
+                <Symbol>BUFFER_BIT</Symbol>
+                <Row>0</Row>
+                <Column>0</Column>
                 <ChosenConnection>Left, Right</ChosenConnection>
               </LadderEntity>
               <LadderEntity>
                 <ElementType>None</ElementType>
-                <Row>1</Row>
-                <Column>7</Column>
+                <Row>7</Row>
+                <Column>10</Column>
                 <ChosenConnection>None</ChosenConnection>
               </LadderEntity>
             </LadderElements>
             <InstructionLines>
               <InstructionLineEntity>
-                <InstructionLine>LD    1</InstructionLine>
+                <InstructionLine>LD  %M501</InstructionLine>
                 <Comment />
               </InstructionLineEntity>
               <InstructionLineEntity>
-                <InstructionLine>[ %MW0 := 0 ]</InstructionLine>
+                <InstructionLine>[ %RTC0.DAY := %MW0 ]</InstructionLine>
+                <Comment />
+              </InstructionLineEntity>
+              <InstructionLineEntity>
+                <InstructionLine>[ %RTC0.MONTH := %MW1 ]</InstructionLine>
+                <Comment />
+              </InstructionLineEntity>
+              <InstructionLineEntity>
+                <InstructionLine>[ %RTC0.YEAR := %MW2 ]</InstructionLine>
+                <Comment />
+              </InstructionLineEntity>
+              <InstructionLineEntity>
+                <InstructionLine>[ %RTC0.HOURS := %MW3 ]</InstructionLine>
+                <Comment />
+              </InstructionLineEntity>
+              <InstructionLineEntity>
+                <InstructionLine>[ %RTC0.MINUTES := %MW4 ]</InstructionLine>
+                <Comment />
+              </InstructionLineEntity>
+              <InstructionLineEntity>
+                <InstructionLine>[ %RTC0.SECONDS := %MW5 ]</InstructionLine>
                 <Comment />
               </InstructionLineEntity>
             </InstructionLines>
-            <Name />
+            <Name>Get Time from Gateway</Name>
+            <MainComment />
+            <Label />
+            <IsLadderSelected>true</IsLadderSelected>
+          </RungEntity>
+          <RungEntity>
+            <LadderElements>
+              <LadderEntity>
+                <ElementType>Line</ElementType>
+                <Row>0</Row>
+                <Column>8</Column>
+                <ChosenConnection>Down, Left, Right</ChosenConnection>
+              </LadderEntity>
+              <LadderEntity>
+                <ElementType>Line</ElementType>
+                <Row>0</Row>
+                <Column>7</Column>
+                <ChosenConnection>Left, Right</ChosenConnection>
+              </LadderEntity>
+              <LadderEntity>
+                <ElementType>Line</ElementType>
+                <Row>0</Row>
+                <Column>6</Column>
+                <ChosenConnection>Left, Right</ChosenConnection>
+              </LadderEntity>
+              <LadderEntity>
+                <ElementType>Line</ElementType>
+                <Row>0</Row>
+                <Column>5</Column>
+                <ChosenConnection>Left, Right</ChosenConnection>
+              </LadderEntity>
+              <LadderEntity>
+                <ElementType>Line</ElementType>
+                <Row>0</Row>
+                <Column>4</Column>
+                <ChosenConnection>Left, Right</ChosenConnection>
+              </LadderEntity>
+              <LadderEntity>
+                <ElementType>Line</ElementType>
+                <Row>0</Row>
+                <Column>3</Column>
+                <ChosenConnection>Left, Right</ChosenConnection>
+              </LadderEntity>
+              <LadderEntity>
+                <ElementType>Line</ElementType>
+                <Row>0</Row>
+                <Column>2</Column>
+                <ChosenConnection>Left, Right</ChosenConnection>
+              </LadderEntity>
+              <LadderEntity>
+                <ElementType>Operation</ElementType>
+                <OperationExpression>%MW7 := %RTC0.MONTH</OperationExpression>
+                <Row>1</Row>
+                <Column>9</Column>
+                <ChosenConnection>Left</ChosenConnection>
+              </LadderEntity>
+              <LadderEntity>
+                <ElementType>Operation</ElementType>
+                <OperationExpression>%MW8 := %RTC0.YEAR</OperationExpression>
+                <Row>2</Row>
+                <Column>9</Column>
+                <ChosenConnection>Left</ChosenConnection>
+              </LadderEntity>
+              <LadderEntity>
+                <ElementType>Operation</ElementType>
+                <OperationExpression>%MW9 := %RTC0.HOURS</OperationExpression>
+                <Row>3</Row>
+                <Column>9</Column>
+                <ChosenConnection>Left</ChosenConnection>
+              </LadderEntity>
+              <LadderEntity>
+                <ElementType>Operation</ElementType>
+                <OperationExpression>%MW10 := %RTC0.MINUTES</OperationExpression>
+                <Row>4</Row>
+                <Column>9</Column>
+                <ChosenConnection>Left</ChosenConnection>
+              </LadderEntity>
+              <LadderEntity>
+                <ElementType>Operation</ElementType>
+                <OperationExpression>%MW11 := %RTC0.SECONDS</OperationExpression>
+                <Row>5</Row>
+                <Column>9</Column>
+                <ChosenConnection>Left</ChosenConnection>
+              </LadderEntity>
+              <LadderEntity>
+                <ElementType>VerticalLine</ElementType>
+                <Row>1</Row>
+                <Column>8</Column>
+                <ChosenConnection>Up, Down, Right</ChosenConnection>
+              </LadderEntity>
+              <LadderEntity>
+                <ElementType>VerticalLine</ElementType>
+                <Row>2</Row>
+                <Column>8</Column>
+                <ChosenConnection>Up, Down, Right</ChosenConnection>
+              </LadderEntity>
+              <LadderEntity>
+                <ElementType>VerticalLine</ElementType>
+                <Row>3</Row>
+                <Column>8</Column>
+                <ChosenConnection>Up, Down, Right</ChosenConnection>
+              </LadderEntity>
+              <LadderEntity>
+                <ElementType>VerticalLine</ElementType>
+                <Row>4</Row>
+                <Column>8</Column>
+                <ChosenConnection>Up, Down, Right</ChosenConnection>
+              </LadderEntity>
+              <LadderEntity>
+                <ElementType>VerticalLine</ElementType>
+                <Row>5</Row>
+                <Column>8</Column>
+                <ChosenConnection>Up, Right</ChosenConnection>
+              </LadderEntity>
+              <LadderEntity>
+                <ElementType>Operation</ElementType>
+                <OperationExpression>%MW6 := %RTC0.DAY</OperationExpression>
+                <Row>0</Row>
+                <Column>9</Column>
+                <ChosenConnection>Left</ChosenConnection>
+              </LadderEntity>
+              <LadderEntity>
+                <ElementType>Line</ElementType>
+                <Row>0</Row>
+                <Column>1</Column>
+                <ChosenConnection>Left, Right</ChosenConnection>
+              </LadderEntity>
+              <LadderEntity>
+                <ElementType>NegatedContact</ElementType>
+                <Descriptor>%M500</Descriptor>
+                <Comment />
+                <Symbol>WRITE_BIT</Symbol>
+                <Row>0</Row>
+                <Column>0</Column>
+                <ChosenConnection>Left, Right</ChosenConnection>
+              </LadderEntity>
+            </LadderElements>
+            <InstructionLines>
+              <InstructionLineEntity>
+                <InstructionLine>LDN  %M500</InstructionLine>
+                <Comment />
+              </InstructionLineEntity>
+              <InstructionLineEntity>
+                <InstructionLine>[ %MW6 := %RTC0.DAY ]</InstructionLine>
+                <Comment />
+              </InstructionLineEntity>
+              <InstructionLineEntity>
+                <InstructionLine>[ %MW7 := %RTC0.MONTH ]</InstructionLine>
+                <Comment />
+              </InstructionLineEntity>
+              <InstructionLineEntity>
+                <InstructionLine>[ %MW8 := %RTC0.YEAR ]</InstructionLine>
+                <Comment />
+              </InstructionLineEntity>
+              <InstructionLineEntity>
+                <InstructionLine>[ %MW9 := %RTC0.HOURS ]</InstructionLine>
+                <Comment />
+              </InstructionLineEntity>
+              <InstructionLineEntity>
+                <InstructionLine>[ %MW10 := %RTC0.MINUTES ]</InstructionLine>
+                <Comment />
+              </InstructionLineEntity>
+              <InstructionLineEntity>
+                <InstructionLine>[ %MW11 := %RTC0.SECONDS ]</InstructionLine>
+                <Comment />
+              </InstructionLineEntity>
+            </InstructionLines>
+            <Name>Move Time to Internal Register</Name>
             <MainComment />
             <Label />
             <IsLadderSelected>true</IsLadderSelected>
@@ -339,16 +696,6 @@
             <ValueRepresentation>Decimal</ValueRepresentation>
           </WatchListItemEntity>
           <WatchListItemEntity>
-            <Address>%MF4014</Address>
-            <IsTraced>false</IsTraced>
-            <ValueRepresentation>Decimal</ValueRepresentation>
-          </WatchListItemEntity>
-          <WatchListItemEntity>
-            <Address>%MF4016</Address>
-            <IsTraced>false</IsTraced>
-            <ValueRepresentation>Decimal</ValueRepresentation>
-          </WatchListItemEntity>
-          <WatchListItemEntity>
             <Address>%MF4018</Address>
             <IsTraced>false</IsTraced>
             <ValueRepresentation>Decimal</ValueRepresentation>
@@ -364,7 +711,112 @@
             <ValueRepresentation>Decimal</ValueRepresentation>
           </WatchListItemEntity>
           <WatchListItemEntity>
-            <Address>%MF4034</Address>
+            <Address>%MW0</Address>
+            <IsTraced>false</IsTraced>
+            <ValueRepresentation>Decimal</ValueRepresentation>
+          </WatchListItemEntity>
+          <WatchListItemEntity>
+            <Address>%MW1</Address>
+            <IsTraced>false</IsTraced>
+            <ValueRepresentation>Decimal</ValueRepresentation>
+          </WatchListItemEntity>
+          <WatchListItemEntity>
+            <Address>%MW2</Address>
+            <IsTraced>false</IsTraced>
+            <ValueRepresentation>Decimal</ValueRepresentation>
+          </WatchListItemEntity>
+          <WatchListItemEntity>
+            <Address>%MW3</Address>
+            <IsTraced>false</IsTraced>
+            <ValueRepresentation>Decimal</ValueRepresentation>
+          </WatchListItemEntity>
+          <WatchListItemEntity>
+            <Address>%MW4</Address>
+            <IsTraced>false</IsTraced>
+            <ValueRepresentation>Decimal</ValueRepresentation>
+          </WatchListItemEntity>
+          <WatchListItemEntity>
+            <Address>%MW5</Address>
+            <IsTraced>false</IsTraced>
+            <ValueRepresentation>Decimal</ValueRepresentation>
+          </WatchListItemEntity>
+          <WatchListItemEntity>
+            <Address>%MW6</Address>
+            <IsTraced>false</IsTraced>
+            <ValueRepresentation>Decimal</ValueRepresentation>
+          </WatchListItemEntity>
+          <WatchListItemEntity>
+            <Address>%MW7</Address>
+            <IsTraced>false</IsTraced>
+            <ValueRepresentation>Decimal</ValueRepresentation>
+          </WatchListItemEntity>
+          <WatchListItemEntity>
+            <Address>%MW8</Address>
+            <IsTraced>false</IsTraced>
+            <ValueRepresentation>Decimal</ValueRepresentation>
+          </WatchListItemEntity>
+          <WatchListItemEntity>
+            <Address>%MW9</Address>
+            <IsTraced>false</IsTraced>
+            <ValueRepresentation>Decimal</ValueRepresentation>
+          </WatchListItemEntity>
+          <WatchListItemEntity>
+            <Address>%MW10</Address>
+            <IsTraced>false</IsTraced>
+            <ValueRepresentation>Decimal</ValueRepresentation>
+          </WatchListItemEntity>
+          <WatchListItemEntity>
+            <Address>%MW11</Address>
+            <IsTraced>false</IsTraced>
+            <ValueRepresentation>Decimal</ValueRepresentation>
+          </WatchListItemEntity>
+          <WatchListItemEntity>
+            <Address>%M500</Address>
+            <IsTraced>false</IsTraced>
+            <ValueRepresentation>BoolNumeric</ValueRepresentation>
+          </WatchListItemEntity>
+          <WatchListItemEntity>
+            <Address>%M501</Address>
+            <IsTraced>false</IsTraced>
+            <ValueRepresentation>BoolNumeric</ValueRepresentation>
+          </WatchListItemEntity>
+          <WatchListItemEntity>
+            <Address>%MW1040</Address>
+            <IsTraced>false</IsTraced>
+            <ValueRepresentation>Decimal</ValueRepresentation>
+          </WatchListItemEntity>
+        </WatchListItemEntities>
+      </WatchListEntity>
+      <WatchListEntity>
+        <Name>Animation table_1</Name>
+        <WatchListItemEntities>
+          <WatchListItemEntity>
+            <Address>%MF5000</Address>
+            <IsTraced>false</IsTraced>
+            <ValueRepresentation>Decimal</ValueRepresentation>
+          </WatchListItemEntity>
+          <WatchListItemEntity>
+            <Address>%MF5002</Address>
+            <IsTraced>false</IsTraced>
+            <ValueRepresentation>Decimal</ValueRepresentation>
+          </WatchListItemEntity>
+          <WatchListItemEntity>
+            <Address>%MF5004</Address>
+            <IsTraced>false</IsTraced>
+            <ValueRepresentation>Decimal</ValueRepresentation>
+          </WatchListItemEntity>
+          <WatchListItemEntity>
+            <Address>%MF5006</Address>
+            <IsTraced>false</IsTraced>
+            <ValueRepresentation>Decimal</ValueRepresentation>
+          </WatchListItemEntity>
+          <WatchListItemEntity>
+            <Address>%MF5008</Address>
+            <IsTraced>false</IsTraced>
+            <ValueRepresentation>Decimal</ValueRepresentation>
+          </WatchListItemEntity>
+          <WatchListItemEntity>
+            <Address>%MW5010</Address>
             <IsTraced>false</IsTraced>
             <ValueRepresentation>Decimal</ValueRepresentation>
           </WatchListItemEntity>
@@ -375,7 +827,7 @@
     <ConstantWordsMemoryAllocation />
     <MemoryBitsMemoryAllocation>
       <Allocation>Manual</Allocation>
-      <ForcedCount>8</ForcedCount>
+      <ForcedCount>1024</ForcedCount>
     </MemoryBitsMemoryAllocation>
     <MemoryWordsMemoryAllocation>
       <Allocation>Manual</Allocation>
@@ -391,7 +843,23 @@
     <SchsMemoryAllocation />
     <HscsMemoryAllocation />
     <PtosMemoryAllocation />
-    <MemoryBits />
+    <MemoryBits>
+      <MemoryBit>
+        <Address>%M500</Address>
+        <Index>500</Index>
+        <Symbol>WRITE_BIT</Symbol>
+      </MemoryBit>
+      <MemoryBit>
+        <Address>%M501</Address>
+        <Index>501</Index>
+        <Symbol>BUFFER_BIT</Symbol>
+      </MemoryBit>
+      <MemoryBit>
+        <Address>%M502</Address>
+        <Index>502</Index>
+        <Symbol>DONE_BIT</Symbol>
+      </MemoryBit>
+    </MemoryBits>
     <SystemBits>
       <MemoryBit>
         <Address>%S0</Address>
@@ -1677,6 +2145,66 @@
     <GrafcetSteps />
     <MemoryWords>
       <MemoryWord>
+        <Address>%MW0</Address>
+        <Index>0</Index>
+        <Symbol>GATEWAY_DAY</Symbol>
+      </MemoryWord>
+      <MemoryWord>
+        <Address>%MW1</Address>
+        <Index>1</Index>
+        <Symbol>GATEWAY_MONTH</Symbol>
+      </MemoryWord>
+      <MemoryWord>
+        <Address>%MW2</Address>
+        <Index>2</Index>
+        <Symbol>GATEWAY_YEAR</Symbol>
+      </MemoryWord>
+      <MemoryWord>
+        <Address>%MW3</Address>
+        <Index>3</Index>
+        <Symbol>GATEWAY_HOURS</Symbol>
+      </MemoryWord>
+      <MemoryWord>
+        <Address>%MW4</Address>
+        <Index>4</Index>
+        <Symbol>GATEWAY_MINUTES</Symbol>
+      </MemoryWord>
+      <MemoryWord>
+        <Address>%MW5</Address>
+        <Index>5</Index>
+        <Symbol>GATEWAY_SECONDS</Symbol>
+      </MemoryWord>
+      <MemoryWord>
+        <Address>%MW6</Address>
+        <Index>6</Index>
+        <Symbol>RTC_DAY</Symbol>
+      </MemoryWord>
+      <MemoryWord>
+        <Address>%MW7</Address>
+        <Index>7</Index>
+        <Symbol>RTC_MONTH</Symbol>
+      </MemoryWord>
+      <MemoryWord>
+        <Address>%MW8</Address>
+        <Index>8</Index>
+        <Symbol>RTC_YEAR</Symbol>
+      </MemoryWord>
+      <MemoryWord>
+        <Address>%MW9</Address>
+        <Index>9</Index>
+        <Symbol>RTC_HOURS</Symbol>
+      </MemoryWord>
+      <MemoryWord>
+        <Address>%MW10</Address>
+        <Index>10</Index>
+        <Symbol>RTC_MINUTES</Symbol>
+      </MemoryWord>
+      <MemoryWord>
+        <Address>%MW11</Address>
+        <Index>11</Index>
+        <Symbol>RTC_SECONDS</Symbol>
+      </MemoryWord>
+      <MemoryWord>
         <Address>%MW1000</Address>
         <Index>1000</Index>
         <Symbol>BLOCK1_START_TIME_Y</Symbol>
@@ -1807,6 +2335,11 @@
         <Index>1034</Index>
         <Symbol>BLOCK1_TANK10_FLW_SP_REAL</Symbol>
         <Comment>BLOCK1 Tank 10 Fertilizer Flow Setpoint</Comment>
+      </MemoryWord>
+      <MemoryWord>
+        <Address>%MW1040</Address>
+        <Index>1040</Index>
+        <Symbol>BLOCK1_ALERT</Symbol>
       </MemoryWord>
       <MemoryWord>
         <Address>%MW1051</Address>
@@ -4068,6 +4601,11 @@
         <Index>4000</Index>
         <Symbol>TOTAL_WATER_FLOW</Symbol>
       </MemoryWord>
+      <MemoryWord>
+        <Address>%MW5010</Address>
+        <Index>5010</Index>
+        <Symbol>RUNTIMEMINS</Symbol>
+      </MemoryWord>
     </MemoryWords>
     <MemoryDoubleWords />
     <MemoryFloats>
@@ -5122,6 +5660,31 @@
         <Index>4034</Index>
         <Symbol>TOTAL_PLACEHOLDER_03</Symbol>
       </MemoryFloat>
+      <MemoryFloat>
+        <Address>%MF5000</Address>
+        <Index>5000</Index>
+        <Symbol>AVERAGEMAINLINEFLOWRATEM3_H</Symbol>
+      </MemoryFloat>
+      <MemoryFloat>
+        <Address>%MF5002</Address>
+        <Index>5002</Index>
+        <Symbol>AVERAGEMAINLINEPRESSURE</Symbol>
+      </MemoryFloat>
+      <MemoryFloat>
+        <Address>%MF5004</Address>
+        <Index>5004</Index>
+        <Symbol>CALCULATEDMM</Symbol>
+      </MemoryFloat>
+      <MemoryFloat>
+        <Address>%MF5006</Address>
+        <Index>5006</Index>
+        <Symbol>TOTALMAINLINEFLOWM3</Symbol>
+      </MemoryFloat>
+      <MemoryFloat>
+        <Address>%MF5008</Address>
+        <Index>5008</Index>
+        <Symbol>TOTALVALVEFLOWM3</Symbol>
+      </MemoryFloat>
     </MemoryFloats>
     <ConstantWords />
     <ConstantDoubleWords />
@@ -5147,7 +5710,42 @@
         <OutputPort>Ethernet</OutputPort>
       </MessageBlock>
     </MessageBlocks>
-    <FunctionBlocks />
+    <FunctionBlocks>
+      <IFunctionBlock Type="SchneiderElectric.Automation.SoMachineBasic.Entities.PLCObjects.FunctionBlocks.RtcFunctionBlock, SchneiderElectric.SoMachineBasic.Entities, Version=1.0.0.0, Culture=neutral, PublicKeyToken=5beddbc0114a5f07">
+        <Address>%RTC0</Address>
+        <Index>0</Index>
+        <Day Type="SchneiderElectric.Automation.SoMachineBasic.Entities.PLCObjects.FunctionBlocks.FbParameterElementRangeType`1[[System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]], SchneiderElectric.SoMachineBasic.Entities, Version=1.0.0.0, Culture=neutral, PublicKeyToken=5beddbc0114a5f07">
+          <Value>
+            <int>1</int>
+          </Value>
+        </Day>
+        <Month Type="SchneiderElectric.Automation.SoMachineBasic.Entities.PLCObjects.FunctionBlocks.FbParameterElementRangeType`1[[System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]], SchneiderElectric.SoMachineBasic.Entities, Version=1.0.0.0, Culture=neutral, PublicKeyToken=5beddbc0114a5f07">
+          <Value>
+            <int>1</int>
+          </Value>
+        </Month>
+        <Year Type="SchneiderElectric.Automation.SoMachineBasic.Entities.PLCObjects.FunctionBlocks.FbParameterElementRangeType`1[[System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]], SchneiderElectric.SoMachineBasic.Entities, Version=1.0.0.0, Culture=neutral, PublicKeyToken=5beddbc0114a5f07">
+          <Value>
+            <int>2020</int>
+          </Value>
+        </Year>
+        <Hours Type="SchneiderElectric.Automation.SoMachineBasic.Entities.PLCObjects.FunctionBlocks.FbParameterElementRangeType`1[[System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]], SchneiderElectric.SoMachineBasic.Entities, Version=1.0.0.0, Culture=neutral, PublicKeyToken=5beddbc0114a5f07">
+          <Value>
+            <int>0</int>
+          </Value>
+        </Hours>
+        <Minutes Type="SchneiderElectric.Automation.SoMachineBasic.Entities.PLCObjects.FunctionBlocks.FbParameterElementRangeType`1[[System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]], SchneiderElectric.SoMachineBasic.Entities, Version=1.0.0.0, Culture=neutral, PublicKeyToken=5beddbc0114a5f07">
+          <Value>
+            <int>0</int>
+          </Value>
+        </Minutes>
+        <Seconds Type="SchneiderElectric.Automation.SoMachineBasic.Entities.PLCObjects.FunctionBlocks.FbParameterElementRangeType`1[[System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]], SchneiderElectric.SoMachineBasic.Entities, Version=1.0.0.0, Culture=neutral, PublicKeyToken=5beddbc0114a5f07">
+          <Value>
+            <int>0</int>
+          </Value>
+        </Seconds>
+      </IFunctionBlock>
+    </FunctionBlocks>
     <MotionTaskTables />
     <FastTask>
       <Period>255</Period>
@@ -5162,8 +5760,8 @@
       <AutoSaveRamOnEeprom>true</AutoSaveRamOnEeprom>
       <WatchdogPeriod>250</WatchdogPeriod>
     </CpuBehavior>
-    <InstListBufferSize>18598</InstListBufferSize>
-    <ProgramBufferSize>148782</ProgramBufferSize>
+    <InstListBufferSize>18514</InstListBufferSize>
+    <ProgramBufferSize>148121</ProgramBufferSize>
     <TraceTimeBase>Time1Sec</TraceTimeBase>
     <UserFunctionPous />
     <UserFunctionBlockPous />
